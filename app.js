@@ -49,9 +49,10 @@ app.command("/huddle", async ({ command, ack, say }) => {
   await ack();
 
   await say(
-    `Join new meeting: https://beta.huddle01.com/room?roomId=${
+    `<b>Room Name: ${command.text || id}</b><br />
+    Join new meeting: https://beta.huddle01.com/room?roomId=${
       command.text || id
-    }`
+    } `
   );
 });
 
